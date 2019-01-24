@@ -1,0 +1,192 @@
+		
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Outpatient Services/ Triage</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Triage details</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <!-- <div class="col-lg-12">
+                <h2>Tab Panels</h2>
+        </div> -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body tabs">
+                    <ul class="nav nav-tabs">
+
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+                        	
+                        	<h1 id="patient_no"></h1>
+                            <h2 id="patient_name"></h2>
+                            <p id="gender"></p>
+                            <p id="patient_visit_no"></p>
+                           
+                        	
+                         
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                <h6><u><b>NB :</b> Inputs marked with ( * ) are mandatory</u></h6>	
+                                    <form class="form-horizontal" name ="triage_form" method="post" >
+                                        <fieldset>
+                                            <!-- Name input-->
+                                            <div class="form-group required">
+                                                <label class="col-md-3 control-label" for="systolic">Systolic </label>
+                                                <div class="col-md-3">
+                                                    <input id="systolic" name="systolic" type="number" placeholder="Systolic" class="form-control" onchange="calculateBp()" required>
+                                                </div>
+                                                <label class="col-md-3 control-label" for="diastolic">Diastolic</label>
+                                                <div class="col-md-3">
+                                                    <input id="diastolic" name="diastolic" type="number" placeholder="Diastolic" class="form-control" onchange="calculateBp()" required>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group required">
+                                                <label class="col-md-3 control-label" for="height">Height(cm)</label>
+                                                <div class="col-md-3">
+                                                    <input id="height" name="height" type="text" placeholder="Height in cms" maxlength="4" class="form-control" onchange="calculateBmi()" required>
+                                                </div>                                                
+                                                <label class="col-md-3 control-label" for="weight">Weight(Kg)</label>
+                                                <div class="col-md-3">
+                                                    <input id="weight" name="weight" type="text" placeholder="Weight in Kgs" maxlength="4" class="form-control" onchange="calculateBmi()" required>
+                                                </div>
+                                                
+                                            </div>
+                                             <div class="form-group required">
+                                                <label class="col-md-3 control-label" for="pulse_rate">Pulse Rate</label>
+                                                <div class="col-md-3">
+                                                    <input id="pulse_rate" name="pulse_rate" type="text" maxlength="3" placeholder="Pulse Rate per min" class="form-control">
+                                                </div>
+                                                <label class="col-md-3 control-label" for="temp">Temperature</label>
+                                                <div class="col-md-3">
+                                                    <input id="temp" name="temp" type="text" placeholder="Temperature" maxlength="4" class="form-control" required>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="is_emergency">Is Emergency</label>
+                                                <div class="col-md-3">
+                                                    <input id="isemergency" name="isemergency" type="checkbox" class="form-control isemergency"/>
+                                                </div>                                                
+                                            </div>
+                                            <div class="form-group" style="display: none" id="mp"> 
+                                                <label class="col-md-3 control-label" for="lmp">LMP</label>
+                                                <div class="col-md-9">
+                                                    <input id="lmp" name="lmp" type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!-- </p> -->
+                                            <!-- allergies input-->
+                                           
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="allergies"> Medical Allergies</label>
+                                                <div class="col-md-9">
+                                                    <!--<input id="medical_allergies" name="medical_allergies" type="text_area" placeholder="Medical Allergies" class="form-control">-->
+                                                    <textarea id="medical_allergies" name="medical_allergies" placeholder="Medical Allergies" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                             <!-- allergies input-->
+                                           
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="allergies">Other Allergies</label>
+                                                <div class="col-md-9">
+                                                    <!--<input id="allergies" name="allergies" type="text_area" placeholder="Allergies" class="form-control">-->
+                                                    <textarea id="allergies" name="allergies" placeholder="Allergies" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <!-- gender input-->
+
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="special_notes">Special Notes</label>
+                                                <div class="col-md-9">
+                                                    <!--<input id="special_notes" name="special_notes" type="text_area" placeholder="Special Notes" class="form-control">-->
+                                                    <textarea id="special_notes" name="special_notes" placeholder="Special Notes" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="bp">B.P levels : </label>
+                                                <div class="col-md-3">
+                                                    <div id="finalBp">  </div>
+                                                </div>
+                                                <label class="col-md-3 control-label" for="bpfeedback">BP Feedback : </label>
+                                                <div class="col-md-3">
+                                                    <div id="Bpfeedback">  </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="BMI">B .M .I : </label>
+                                                <div class="col-md-3">
+                                                    <div id="finalBmi">  </div>
+                                                </div>
+                                                <label class="col-md-3 control-label" for="bmifeedback">B.M.I Feedback : </label>
+                                                <div class="col-md-3">
+                                                    <div id="Bmifeedback">  </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+<!--                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="bp">B.P levels : </label>
+                                                <div class="col-md-9">
+                                                    <div id="finalBp">  </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="bpfeedback">BPFeedback</label>
+                                                <div class="col-md-9">
+                                                    <div id="Bpfeedback">  </div>
+                                                </div>
+                                            </div>-->
+<!--                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="BMI">BMI : </label>
+                                                <div class="col-md-9">
+                                                    <div id="finalBmi">  </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" for="bmifeedback">Feedback</label>
+                                                <div class="col-md-9">
+                                                    <div id="Bmifeedback">  </div>
+                                                </div>
+                                            </div>	-->
+                                            				
+                                            <!-- Form actions -->
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-right">
+                                                    <a href="javascript:void(0)" class="btn btn-primary btn-md pull-right triage_submit_btn">Submit</a>
+
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                               
+                               </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div><!--/.panel-->
+        </div><!--/.col-->
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->
+</div>	<!--/.main-->
+

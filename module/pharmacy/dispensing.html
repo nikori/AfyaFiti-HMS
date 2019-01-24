@@ -1,0 +1,129 @@
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Pharmacy/Dispensing</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Prescription dispensing</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="col-lg-12">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Patients Queue</div>
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12" id="disp_tablediv">
+                        <table class="table table-hover" id="disp_table">
+                            <thead>
+                                <tr>
+                                    <th>Visit No</th>
+                                    <th>Patient Name</th>                                    
+                                    <th>Visit Date</th>
+                                    <th>Payment Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div id="disp" class="hidden">
+                        <div class="col-md-12">
+                            <h1 id="vnum"></h1>
+                            <h2 id="patname"></h2>
+                            <h2 id="visitno"></h2>
+                               
+                            <p class="hidden visit_id" id="visit_id">                          
+                            <p class="hidden cpid" id="cpat_id"></p>
+                            <p class="hidden pvid" id="patvis_id"></p>
+                            <p id="gen"></p>
+                            <p id="dis_dob"></p>
+                            <div class="panel-heading"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-body tabs">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#prestab" data-toggle="tab">Patient's Prescription</a></li>
+                                            <li><a href="#prehisttab" data-toggle="tab">Prescription History</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="prestab">
+                                                <h4>Medication</h4>
+                                                <div class="row">
+                                                   
+                                                    <div class="col-lg-12">
+                                                        <button class="print_prescription btn btn-primary btn-md pull-left" onclick="print_prescription()">Print</button>
+                                                        <button type="button" class="btn btn-primary btn-md pull-right submit-btn return_consultation" data-toggle="modal" data-target="#return_prescription">Return to Consultation</button>
+                                                    </div>
+                                                </div><!--/.row-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="col-md-12" id="vist_tablediv">
+                                                            <table class="table table-hover" id="visittable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Visit date</th>
+                                                                        <th>Visit No</th>
+                                                                        <th>Medicine Name</th>
+                                                                        <th>Dosage</th>
+                                                                        <th>Dispensing Quantity</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <div id="end_visit"> </div>
+                                            </div> 
+                                            <div class="tab-pane fade" id="prehisttab">
+                                                <div class="panel-group" id="accordion">
+
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div><!--/.panel-->
+                            </div><!--/.col-->
+                        </div><!--/.row-->
+                        <!-- Modal -->
+                        <div class="modal fade" id="return_prescription" tabindex="-1" role="dialog" aria-labelledby="return_prescription_Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="return_prescription_Label">Return Prescription Note</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--<div class="form-group">-->
+                                            <div class="col-md-12">
+                                                <textarea id="return_note" name="return_note" placeholder="" class="return_note form-control" rows="5"></textarea>
+                                            </div>
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary send_return_note">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->

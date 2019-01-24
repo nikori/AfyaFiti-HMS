@@ -1,0 +1,200 @@
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Special Clinics/Maternity Services</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Maternity Services</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="col-lg-12">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Patients</div>
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12" id="maternity_tablediv">
+                        <table class="table table-hover" id="maternitytable">
+                            <thead>
+                                <tr>
+                                    <th>Visit No</th>
+                                    <th>Patient No</th>
+                                    <th>Patient Name</th>
+                                    <th>Visit Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div id="maternity_consult" class="hidden">
+                        <div class="col-md-12">
+                            <h1 id="maternity_vn"></h1>
+                            <h2 id="maternity_pid"></h2>
+                            <h2 id="maternity_pname"></h2>
+                            <h3 id="test_details"></h3>
+                            <p class="hidden cpid" id="maternity_cpid"></p>
+                            <p class="hidden pvid" id="maternity_pvid"></p>
+                            <p id="maternity_gender"></p>
+                            <p id="maternity_dob"></p>
+
+                            <div class="panel-heading"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-body tabs">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab">Patient Maternity History</a></li>
+                                            <!--<li><a href="#tab2" data-toggle="tab">Dental Triage vitals</a></li>-->
+                                            <li><a href="#tab3" data-toggle="tab">Observation</a></li>
+                                            <li><a href="#tab4" data-toggle="tab">Diagnosis</a></li>
+                                            <li><a href="#tab5" data-toggle="tab">Treatment</a></li>
+
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade  in active" id="tab1">
+                                                <div class="panel-group" id="maternity_accordion">
+
+                                                </div>                                                
+                                            </div>
+<!--                                            <div class="tab-pane fade" id="tab2">
+                                                <h4>Dental Vitals</h4>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <form class="form-horizontal" action="" method="post">
+                                                            <fieldset>
+                                                                <div class="col-md-12" id="tdv">
+                                                                    <table class="table table-hover" id="vts">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Vital Sign</th>
+                                                                                <th>Notes</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                            <div class="tab-pane fade" id="tab3">
+                                                <h4>Symptoms</h4>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <form class="form-horizontal" action="" method="post">
+                                                            <fieldset>                                                                            
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label" for="symptoms">Symptoms Notes</label>
+                                                                    <div class="col-md-9">
+                                                                        <textarea id="maternity_sympt" name="maternity_sympt" placeholder="" class="maternity_sympt form-control" rows="4"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="text" class="hidden created_by" name="created_by" id="created_by">	
+                                                                <input type="text" class="hidden updated_by" name="updated_by" id="updated_by">	
+                                                                <input type="text" class="hidden facility_id" name="facility_id" id="facility_id">	
+                                                                <!-- Form actions -->
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12 widget-right">
+                                                                        <button id = "submit_maternity_sympt" type="button" class="submit_maternity_sympt btn btn-default btn-md pull-right">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab4">
+                                                <h4>Diagnosis</h4>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <form class="form-horizontal" action="" method="post">
+                                                            <fieldset>
+                                                                <!-- Email input-->
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label" for="disease">Diseases</label>
+                                                                    <div class="col-md-9">
+                                                                        <input list="disease" id ="dis" name="diseases" placeholder="" class="maternity_dis form-control">
+                                                                        <datalist id="deantal_disease">
+
+                                                                        </datalist>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label" for="notes">Notes</label>
+                                                                    <div class="col-md-9">
+                                                                        <textarea id="maternity_diag_notes" name="maternity_notes" placeholder="" class="maternity_diag_notes form-control" rows="4"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="text" class="hidden created_by" name="created_by" id="created_by">	
+                                                                <input type="text" class="hidden updated_by" name="updated_by" id="updated_by">	
+                                                                <input type="text" class="hidden facility_id" name="facility_id" id="facility_id">	
+                                                                <!-- Form actions -->
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12 widget-right">
+                                                                        <button id = "maternity_submit_diagnos"type="button" class="maternity_submit_diagnosis btn btn-default btn-md pull-right">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="tab5">
+                                                <h4>Treatment</h4>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="controls"><!--changes start-->
+                                                            <form id="maternity_treatmentform"class="form-horizontal" action="" method="post">
+                                                                <div class="entry input-group col-sm-11">
+                                                                    <input list="maternity_drg"  class="form-control maternity_drugs" name="maternity_drugs[]" type="text" placeholder="Drug Name" />
+                                                                    <datalist id="maternity_drg">
+
+                                                                    </datalist>
+                                                                    <input class="form-control maternity_dose" name="maternity_dosage[]" type="text" placeholder="Dosage" />
+                                                                    <input class="form-control maternity_notes" name="maternity_notes[]" type="text" placeholder="Notes" />
+
+                                                                    <input type="text" class="hidden created_by" name="created_by" id="created_by"> 
+                                                                    <input type="text" class="hidden updated_by" name="updated_by" id="updated_by"> 
+                                                                    <input type="text" class="hidden facility_id" name="facility_id" id="facility_id">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-success btn-add" type="button">
+                                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <!--</div>-->
+
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12 widget-right">
+                                                                        <button type="button" class="maternity_submit_treatment btn btn-default btn-md pull-right">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div><!--/.panel-->
+                            </div><!--/.col-->
+                        </div><!--/.row-->
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->

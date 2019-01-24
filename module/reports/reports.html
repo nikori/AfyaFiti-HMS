@@ -1,0 +1,143 @@
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Reports/Patients Reports</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Patients Report</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <div class="row">
+            <div class="col-xs-6 col-md-6 col-lg-6">
+                <div class="panel panel-teal panel-widget border-right">
+                    <div class="container">
+                        <div class="accordion-option">
+                            <h3 class="title">System Reports</h3>
+                            <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Patients Reports
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Patients List
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                Laboratory Report
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            Lab Revenue
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                Pharmacy Reports
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            Dispensing
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                Accounts Reports
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                        <div class="panel-body">
+                                            Day's collection
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFive">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                Inventory Reports
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+                                        <div class="panel-body">
+                                            Stock orders
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-6 col-lg-6">
+                    <div class="panel panel-blue panel-widget border-right">
+
+                    </div>
+                </div>            
+            </div><!--/.row-->
+        </div>
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $(".toggle-accordion").on("click", function () {
+                var accordionId = $(this).attr("accordion-id"),
+                        numPanelOpen = $(accordionId + ' .collapse.in').length;
+
+                $(this).toggleClass("active");
+
+                if (numPanelOpen == 0) {
+                    openAllPanels(accordionId);
+                } else {
+                    closeAllPanels(accordionId);
+                }
+            })
+
+            openAllPanels = function (aId) {
+                console.log("setAllPanelOpen");
+                $(aId + ' .panel-collapse:not(".in")').collapse('show');
+            }
+            closeAllPanels = function (aId) {
+                console.log("setAllPanelclose");
+                $(aId + ' .panel-collapse.in').collapse('hide');
+            }
+
+        });
+        
+    </script>

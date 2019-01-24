@@ -1,0 +1,113 @@
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Outpatient Services/Radiology</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Radiology</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="col-lg-12">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Patients</div>
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12" id="radiology_tablediv">
+                        <table class="table table-hover" id="radiologytable">
+                            <thead>
+                                <tr>
+                                    <th>Visit No</th>
+                                    <th>Patient No</th>
+                                    <th>Patient Name</th>
+                                    <th>Visit Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div id="radiology_consult" class="hidden">
+                        <div class="col-md-12">
+                            <h1 id="radiology_vn"></h1>
+                            <h2 id="radiology_pid"></h2>
+                            <h2 id="radiology_pname"></h2>
+                            <h3 id="radiology_test_details"></h3>
+                            <p class="hidden radiology_cpid" id="radiology_cpid"></p>
+                            <p class="hidden radiology_pvid" id="radiology_pvid"></p>
+                            <p id="radiology_gender"></p>
+                            <p id="radiology_dob"></p>
+
+                            <div class="panel-heading"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-body tabs">
+                                        <ul class="nav nav-tabs">
+                                            <!--<li><a href="#lab_tab1" data-toggle="tab">Patient History</a></li>-->
+                                            <li class="active"><a href="#radiology_tab1" data-toggle="tab">Vitals</a></li>
+                                            <li><a href="#radiology_tab2" data-toggle="tab">Requested Tests</a></li>
+                                        </ul>
+                                        <div class="tab-pane fade in active" id="radiology_tab1">
+                                            <h4>Vitals</h4>
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <form class="form-horizontal" action="" method="get">
+                                                        <fieldset>
+                                                            <div class="col-md-12" id="radiology_tdv">
+                                                                <table class="table table-hover" id="radiology_vts">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Vital Sign</th>
+                                                                            <th>Notes</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                </table>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="radiology_tab2">
+                                            <!--<div class="panel panel-default">-->
+                                                <!--<div class="panel-body">-->
+                                                    <!--<form class="form-horizontal" action="" method="post">-->
+                                                        <!--<fieldset>--> 
+                                                            <div class="panel-group" id="radiology_container">
+                                                                <!-- to enter dynamic tested products from the database -->
+                                                            </div>
+                                                            <input type="text" class="hidden created_by" name="created_by" id="radiology_created_by">	
+                                                            <input type="text" class="hidden updated_by" name="updated_by" id="radiology_updated_by">	
+                                                            <input type="text" class="hidden facility_id" name="facility_id" id="radiology_facility_id">	
+                                                            <!-- Form actions -->
+                                                            <div class="form-group">
+                                                                <div class="col-md-12 widget-right">
+                                                                    <button id="submitradiology" type="button" class=" submitradiology btn btn-default btn-md pull-right">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        <!--</fieldset>-->
+                                                    <!--</form>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                </div><!--/.panel-->
+                            </div><!--/.col-->
+                        </div><!--/.row-->
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->

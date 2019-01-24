@@ -1,0 +1,77 @@
+        
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Appointment/ Book Appointment</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Book Appointment</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Appointment details</div>
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12">
+                        <!--appointment form -->
+                        
+                            <div class="form-group">
+                                <label for="apt_name"><b>Patient Name:</b></label>
+                                <input class="form-control apt_name" type="text" id="apt_name" name="apt_name" list="pat_name" required/>
+                                <datalist id="pat_name">
+
+                                </datalist>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <label for="apt_type"><b>Department:</b></label>
+                                <input class="form-control apt_type" type="text" id="apt_type" name="apt_type" list="pat_type" required/>
+                                <datalist id="pat_type">
+
+                                </datalist>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appt_date"><b>Appointment Date:</b></label>
+                                <input class="form-control start_date" type="date" id="appt_date" name="start_date">
+                            </div>
+
+                            <!--                            <div class="form-group">
+                                                            <label for="end_date"><b>Time:</b></label>
+                                                            <div class="input-group clockpicker">                                    
+                                                                <input type="text" class="form-control" value="09:30">
+                                                                <span class="input-group-addon">
+                                                                    <span class="glyphicon glyphicon-time"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>-->
+                            <div class="form-group">
+                                <label for="time"><b>Time:</b></label>
+                                <input class="form-control time" type="time" id="time" name="time">
+
+                            </div>
+                            <div class="col-md-12 widget-right">
+                                <button onclick="submitAppointment()" class="submit_appointment btn btn-default btn-md pull-right">Save</button>
+                            </div>                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+
+    <div>
+
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->

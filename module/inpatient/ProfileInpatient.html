@@ -1,0 +1,630 @@
+		
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Inpatient Service / Patient Profile</li>
+        </ol>
+    </div><!--/.row-->
+
+    <!--    <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Patient Profile</h1>
+            </div>
+        </div>/.row-->
+
+    <div class="row">
+        <!-- <div class="col-lg-12">
+                <h2>Tab Panels</h2>
+        </div> -->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body tabs">
+                    <ul class="nav nav-tabs">
+
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+                            <h2 id="patient_name"></h2>
+                            <h4 id="patient_visit_no"></h4>
+                            <h4 id="patientno"></h4> 
+                            <h5 id="patient_dob"></h5>                            
+                            <h6 id="gender"></h6>                             
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.panel-->
+        </div><!--/.col-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#tab2" data-toggle="tab">Vitals</a>
+                            </li>
+                            <li>
+                                <a href="#tab3" data-toggle="tab">Diagnosis</a>
+                            </li>
+                            <li>
+                                <a href="#tab4" data-toggle="tab">Add Observation</a>
+                            </li>
+                            <li>
+                                <a href="#tab10" data-toggle="tab">Prescription</a>
+                            </li>
+                            <li>
+                                <a href="#tab7" data-toggle="tab">Lab Test</a>
+                            </li>
+                            <li>
+                                <a href="#tab12" data-toggle="tab">Radiology</a>
+                            </li>
+                            <li style="display: none" id="lab_results">
+                                <a href="#tab8" data-toggle="tab">Lab Results</a>
+                            </li>
+                            <li style="display: none" id="radiology_results">
+                                <a href="#tab13" data-toggle="tab">Radiology Results</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane fade in active" id="tab2">
+                                <!--<h4>Vitals</h4>-->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" action="" method="post">
+                                            <fieldset>
+                                                <div class="col-md-12" id="weightf">
+                                                    <!--<label class="col-md-2 control-label" for="symptoms">Last Vitals Date:</label>-->
+                                                    <label class="col-md-2 control-label" id="weight">Weight(kg):</label>
+                                                    <!--<h2 id="weight"></h2>-->
+                                                </div>
+                                                <div class="col-md-12" id="tdv">
+                                                    <label class="col-md-2 control-label" id="height">Height(cm):</label>
+                                                </div>                                               
+                                                <div class="col-md-12" id="tdv">
+                                                    <label class="col-md-2 control-label" id="bmi">BMI:</label>
+                                                </div>
+
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3">
+                                <h4>Diagnosis</h4>
+                                <div id="accordion">
+
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Today.
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div class="col-md-12" id="disp_tablediv">
+                                                    <table class="table table-hover" id="disp_table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Drug Name</th>
+                                                                <th>Dosage</th>                                    
+                                                                <th>Frequency</th>
+                                                                <th>Duration</th>
+                                                                <th>Dispensing qty</th>
+                                                                <th>Dosage Instructions</th>
+                                                                <th>Meal Instructions</th>
+                                                                <th>Special Notes</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Archives.
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div class="col-md-12" id="disp_tablediv">
+                                                    <table class="table table-hover" id="disp_table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Drug Name</th>
+                                                                <th>Dosage</th>                                    
+                                                                <th>Frequency</th>
+                                                                <th>Duration</th>
+                                                                <th>Dispensing qty</th>
+                                                                <th>Dosage Instructions</th>
+                                                                <th>Meal Instructions</th>
+                                                                <th>Special Notes</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab4">
+                                <!--<h4>Diagnosis</h4>-->
+                                <!--<h6><u><b>NB :</b> Inputs marked with ( * ) are mandatory</u></h6>-->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" action="" method="post">
+                                            <fieldset>
+                                                <div class="form-group required">
+                                                    <label class="col-md-3 control-label" for="email">Diagnosis Type</label>
+                                                    <div class="col-md-9">
+                                                        <select class="form-control dis" id="dise" name="dis">
+                                                        </select>
+                                                        <!--                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label" for="phone">Notes</label>
+                                                    <div class="col-md-9">
+                                                        <textarea id="diag_notes" name="notes" placeholder="" class=" diag_notes form-control" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="hidden patient_id" name="patient_id" id="patient_id">
+<!--                                                <input type="text" class="hidden updated_by" name="updated_by" id="updated_by">
+                                                <input type="text" class="hidden facility_id" name="facility_id" id="facility_id">-->
+
+                                                <div class="form-group">
+                                                    <div class="col-md-12 widget-right">
+                                                        <!--<button id="submit_diagnos" type="button" class=" submit_diagnosis btn btn-default btn-md pull-right">Save</button>-->
+                                                        <!--<button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>-->
+                                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                                        <a href="javascript:void(0)" class="btn  btn-primary pull-right submit_bed" onclick="AddDiagnosis()">Click When Done</a>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab7">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4>Laboratory</h4>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button type="button" class="btn btn-primary btn-md pull-right add_lab_test fa fa-plus" data-toggle="modal" data-target="#LabModal">Add Lab Test</button>
+                                    </div>
+                                </div><!--/.row-->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="controls">
+                                            <!--changes start-->
+                                            <div class="col-md-12" id="lab_tablediv">
+                                                <table class="table table-hover" id="laboratory_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Lab Test</th>
+                                                            <th>Notes</th>                                                                            
+                                                            <th>Edit Prescription</th>
+                                                            <th>Delete Prescription</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-right">
+                                                    <button type="button" id="submit_labnotes" class="submit_labnotes btn-default btn-md pull-right">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="tab-pane fade" id="tab8">
+                                <h4>Lab Results</h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" action="" method="post">
+                                            <fieldset>
+                                                <div class="col-md-12" id="test_res">
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab13">
+                                <h4>Radiology Results</h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" action="" method="post">
+                                            <fieldset>
+                                                <div class="col-md-12" id="radio_res">
+                                                    <table class="table table-hover" id="radio_test_table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Test details</th>
+                                                                <th>Results</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab10">
+                                <!--<h4>Prescription</h4>-->
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4>Prescription</h4>
+                                    </div>
+                                    <!--<input type="hidden" name="drug_nam" class="drug_nam form-control" id="drug_nam" />-->
+                                    <div class="col-lg-6">
+                                        <button type="button" class="btn btn-primary btn-md pull-right add_prescription fa fa-plus" data-toggle="modal" data-target="#prescritionModal">Add Prescription</button>
+                                    </div>
+                                </div><!--/.row-->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="controls">
+                                            <!--changes start-->
+                                            <div class="col-md-12" id="disp_tablediv">
+                                                <table class="table table-hover" id="disp_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Drug Name</th>
+                                                            <th>Dosage</th>                                    
+                                                            <th>Frequency</th>
+                                                            <th>Duration</th>
+                                                            <th>Dispensing qty</th>
+                                                            <th>Dosage Instructions</th>
+                                                            <th>Meal Instructions</th>
+                                                            <th>Special Notes</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-right">
+                                                    <button type="button" class="submit_prescription btn btn-default btn-md pull-right">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab11">
+                                <h4>Admission</h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="controls">
+                                            <!--changes start-->
+                                            <form class="add_prescription" id="add_admission" >
+                                                <div class="form-row">  
+                                                    <div class="form-group col-md-6">
+                                                        <label for="quantity">Admission Type</label>
+                                                        <select class="form-control input-md adm_type" id="adm_type" name="admissiontype" required>
+                                                            <option value="" selected>Select Type</option>
+                                                            <option value="elective">Elective</option>
+                                                            <option value="emergency">Emergency</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="quantity">IS Emergency</label>
+                                                        <input id="isemergency" name="isemergency" type="checkbox" class="form-control isemergency"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="adm_notes">Admission Notes</label>
+                                                        <textarea id="adm_notes" name="admissionresult" placeholder="Admission notes" class="form-control adm_notes" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">  
+                                                    <input type="hidden" name="isactive" class="isactive form-control" id="isactive" value="Y"/>
+                                                    <input type="hidden" name="c_patient_id" class="admn_c_patient_id form-control" id="admn_c_patient_id" />
+                                                    <input type="hidden" name="p_visit_id" class="admn_p_visit_id form-control" id="admn_p_visit_id" />
+                                                    <input type="hidden" name="c_user_id" class="admn_c_user_id form-control" id="admn_c_user_id"/>
+
+                                                    <input type="hidden" name="createdby" class="admn_createdby form-control" id="admn_createdby" />
+                                                    <input type="hidden" name="updatedby" class="admn_updatedby form-control" id="admn_updatedby" />
+                                                    <input type="hidden" name="c_facility_id" class="admn_c_facility_id form-control" id="admn_c_facility_id" />
+                                                </div> 
+                                                <button type="submit" class="btn btn-primary btn-md pull-right sub_admission" id="sub_admission" >Submit</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab12">
+                                <!--<h4>Prescription</h4>-->
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4>Radiology</h4>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button type="button" class="btn-primary btn-md pull-right add_radio fa fa-plus" data-toggle="modal" data-target="#RadioModal">Add Service</button>
+                                    </div>
+                                </div><!--/.row-->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="controls">
+                                            <!--changes start-->
+                                            <div class="col-md-12" id="radio_tablediv">
+                                                <table class="table table-hover" id="radio_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Test Category</th>
+                                                            <th>Test Name</th>                                    
+                                                            <th>Notes</th>                                                                            
+                                                            <th>Edit Action</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-right">
+                                                    <button type="button" class="submit_radiology btn-default btn-md pull-right">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="LabModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <form class="add_lab_test" id="add_lab_test" >
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">                                                                    
+                                                        <!--                                                                        <label for="test_name">Laboratory Tests</label>
+                                                                                                                                <input list="labtst" class="form-control group_name" name="group_name" type="text" placeholder="Select lab name" id='group_name'/>
+                                                                                                                                <datalist id="labtst">
+                                                        
+                                                                                                                                </datalist>-->
+                                                        <label for="test_category">Laboratory Tests</label>
+                                                        <select class="form-control group_name" id="group_name" name="group_name" onchange="getLabtests()">
+
+                                                        </select>
+                                                    </div> 
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="labnotes">Special Notes</label>
+                                                        <textarea id="test_notes" name="test_notes" placeholder="" class="form-control test_notes" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">  
+                                                    <input type="hidden" name="createdby" class="lab_createdby form-control" id="lab_createdby" />
+                                                    <input type="hidden" name="updatedby" class="lab_updatedby form-control" id="lab_updatedby" />
+                                                    <input type="hidden" name="c_patient_id" class="lab_c_patient_id form-control" id="lab_c_patient_id" />
+                                                    <input type="hidden" name="p_visit_id" class="lab_p_visit_id form-control" id="lab_p_visit_id" />
+                                                    <input type="hidden" name="m_productgroup" class="lab_m_productgroup form-control" id="lab_m_productgroup" />
+                                                    <input type="hidden" name="m_product_id" class="lab_m_product_id form-control" id="lab_m_product_id" />
+                                                </div> 
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn-primary btn-md pull-right submit_laboratory" id="submit_laboratory">Submit</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="RadioModal" tabindex="-1" role="dialog" aria-labelledby="radioModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <form class="add_radiology" id="add_radiology" >
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="test_category">Test Category</label>
+                                                        <select class="form-control category_name" id="category_name" name="category_name" onchange="getRadiologytests()">
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="test_name">Test Name</label>
+                                                        <select class="form-control test_name" id="test_name" name="test_name">
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="radiospecialnotes">Special Notes</label>
+                                                        <textarea id="radio_notes" name="test_notes" placeholder="Special notes" class="form-control radio_notes" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">  
+                                                    <input type="hidden" name="c_patient_id" class="radio_c_patient_id form-control" id="radio_c_patient_id" />
+                                                    <input type="hidden" name="p_visit_id" class="radio_p_visit_id form-control" id="radio_p_visit_id" />
+                                                    <input type="hidden" name="m_product_id" class="radio_m_product_id form-control" id="radio_m_product_id" />                                                                    
+                                                    <input type="hidden" name="m_productgroup" class="radio_m_productgroup form-control" id="radio_m_productgroup" /> 
+                                                    <input type="hidden" name="createdby" class="radio_createdby form-control" id="radio_createdby" />
+                                                    <input type="hidden" name="updatedby" class="radio_updatedby form-control" id="radio_updatedby" />
+                                                    <input type="hidden" name="c_facility_id" class="radio_c_facility_id form-control" id="radio_c_facility_id" />
+                                                </div> 
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn-primary btn-md pull-right sub_radiology" id="sub_radiology">Submit</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="prescritionModal" tabindex="-1" role="dialog" aria-labelledby="prescriptionModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <form class="add_prescription" id="add_prescription" >
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">                                                                    
+                                                        <label for="maritalstatus">Drug Name</label>
+                                                        <input list="drg" class="form-control prescription_drugs" name="drugs[]" type="text" placeholder="Select drug name" id='drug_list'/>
+                                                        <datalist id="drg">
+
+                                                        </datalist>
+                                                    </div>  
+                                                    <div class="form-group col-md-6">
+                                                        <label for="quantity">Quantity Balance</label>
+                                                        <input id="qty_balance" name="qty_balance" type="text" placeholder="Quantity Bal" class="form-control input-md qty_balance" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="dosage">Dosage</label>
+                                                        <input id="dosage" name="dosage" type="text" onchange="changeQuantity(this.form)" placeholder="Dosage" class="form-control input-md dosage" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="frequency">Frequency</label>
+                                                        <input id="frequency" name="frequency" type="text" onchange="changeQuantity(this.form)" placeholder="Frequency" class="form-control input-md frequency">
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="duration">Duration</label>
+                                                        <input id="duration" name="duration" onchange="changeQuantity(this.form)" type="text" placeholder="Duration" class="form-control input-md duration" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input id="quantity" name="quantity" type="text" placeholder="Quantity" class="form-control input-md quantity" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="dosage_instructions">Dosage instructions</label>
+                                                        <input id="dosage_instructions" name="dosage_instructions" type="text" placeholder="Entrer Instructions" class="form-control input-md dosage_instructions">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="meal_instructions">Meal Instructions</label>
+                                                        <input id="meal_instructions" name="meal_instructions" type="text" placeholder="Meal Instructions" class="form-control input-md meal_instructions">
+                                                    </div>                                                        
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="specialnotes">Special Notes</label>
+                                                        <textarea id="notes" name="notes" placeholder="Special notes" class="form-control specialnotes" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">  
+                                                    <input type="hidden" name="p_medicalnote_id" class="p_medicalnote_id form-control" id="p_medicalnote_id" value="10"/>
+                                                    <input type="hidden" name="m_store_id" class="m_store_id form-control" id="m_store_id" value="1000014"/>
+                                                    <input type="hidden" name="c_patient_id" class="c_patient_id form-control" id="c_patient_id" />
+                                                    <input type="hidden" name="p_visit_id" class="p_visit_id form-control" id="p_visit_id" />
+                                                    <input type="hidden" name="c_dosage_id" class="c_dosage_id form-control" id="c_dosage_id" value="1"/>
+
+                                                    <input type="hidden" name="m_product_id" class="m_product_id form-control" id="m_product_id" />                                                                    
+                                                    <input type="hidden" name="createdby" class="cons_createdby form-control" id="cons_createdby" />
+                                                    <input type="hidden" name="updatedby" class="cons_updatedby form-control" id="cons_updatedby" />
+                                                    <input type="hidden" name="c_facility_id" class="cons_c_facility_id form-control" id="cons_c_facility_id" />
+                                                </div> 
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary btn-md pull-right add_prescription_btn" id="add_prescription_btn">Submit</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="edit_prescritionModal" tabindex="-1" role="dialog" aria-labelledby="edit_exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <div class="modal-body">
+                                            <form class="add_edit_prescription" id="add_edit_prescription" >
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">                                                                    
+                                                        <label for="maritalstatus">Drug Name</label>
+                                                        <input list="drg" class="form-control edit_prescription_drugs" name="drugs[]" type="text" placeholder="Select drug name" id='edit_drug_list'/>
+                                                        <datalist id="drg">
+
+                                                        </datalist>
+                                                    </div>  
+                                                    <div class="form-group col-md-6">
+                                                        <label for="quantity">Quantity Balance</label>
+                                                        <input id="edit_qty_balance" name="qty_balance" type="text" placeholder="Quantity Bal" class="form-control input-md edit_qty_balance" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="dosage">Dosage</label>
+                                                        <input id="edit_dosage" name="dosage" type="text" onchange="changeQuantity(this.form)" placeholder="Dosage" class="form-control input-md edit_dosage" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="frequency">Frequency</label>
+                                                        <input id="edit_frequency" name="frequency" type="text" onchange="changeQuantity(this.form)" placeholder="Frequency" class="form-control input-md edit_frequency">
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="duration">Duration</label>
+                                                        <input id="edit_duration" name="duration" onchange="changeQuantity(this.form)" type="text" placeholder="Duration" class="form-control input-md edit_duration" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input id="edit_quantity" name="quantity" type="text" placeholder="Quantity" class="form-control input-md edit_quantity" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="dosage_instructions">Dosage instructions</label>
+                                                        <input id="edit_dosage_instructions" name="dosage_instructions" type="text" placeholder="Entrer Instructions" class="form-control input-md edit_dosage_instructions">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="meal_instructions">Meal Instructions</label>
+                                                        <input id="edit_meal_instructions" name="meal_instructions" type="text" placeholder="Meal Instructions" class="form-control input-md edit_meal_instructions">
+                                                    </div>                                                        
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="specialnotes">Special Notes</label>
+                                                        <textarea id="edit_notes" name="notes" placeholder="Special notes" class="form-control edit_specialnotes" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">  
+                                                    <input type="hidden" name="p_medicalnote_id" class="edit_p_medicalnote_id form-control" id="edit_p_medicalnote_id" value="10"/>
+                                                    <input type="hidden" name="m_store_id" class="edit_m_store_id form-control" id="edit_m_store_id" value="1000014"/>
+                                                    <input type="hidden" name="c_patient_id" class="edit_c_patient_id form-control" id="edit_c_patient_id" />
+                                                    <input type="hidden" name="p_visit_id" class="edit_p_visit_id form-control" id="edit_p_visit_id" />
+                                                    <input type="hidden" name="c_dosage_id" class="edit_c_dosage_id form-control" id="edit_c_dosage_id" value="1"/>
+
+                                                    <input type="hidden" name="m_product_id" class="edit_m_product_id form-control" id="edit_m_product_id" />                                                                    
+                                                    <input type="hidden" name="createdby" class="edit_cons_createdby form-control" id="edit_cons_createdby" />
+                                                    <input type="hidden" name="updatedby" class="edit_cons_updatedby form-control" id="edit_cons_updatedby" />
+                                                    <input type="hidden" name="c_facility_id" class="edit_cons_c_facility_id form-control" id="edit_cons_c_facility_id" />
+                                                </div> 
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary btn-md pull-right update_prescription" id="update_prescription">Update</button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.panel-->
+            </div>
+            <!--/.col-->
+        </div>
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->
+</div>	<!--/.main-->
+

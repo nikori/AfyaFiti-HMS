@@ -1,0 +1,196 @@
+
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Transfer Management</li>
+        </ol>
+    </div><!--/.row-->
+    <div class="row transfers_table_div">
+        <div class="col-lg-12">
+            <div class="panel-heading">Transfer Details</div>
+            <div class="panel-body">
+                <div>
+                    <button class="btn btn-info btn-sm add_transfers_link"><i class="fa fa-plus-square-o "></i> Add Transfer</button>
+                </div>
+                <hr>
+                <div class="transfers_results_div">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="add_transfers_div" style="display: none;">
+
+        <div class="row add_transfers_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add Transfer</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Transfer Details</div>
+                    <div class="panel-body">
+                        <h4>Transfer Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal add_transfers_form" id="add_transfers_form" >
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="id_name" name="name" type="text" placeholder="Transfer name" class="form-control input-md name">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="store_name">Store Name</label>
+                                            <div class="col-md-9">
+
+
+
+                                                <select id ="stores" name="stores" type="textarea" placeholder="Search by Store Name" class="stores form-control" >
+                                                    <option value="">Please Select : </option>
+                                                </select>
+
+                                                <input  id ="c_facility_id" name="c_facility_id" type="hidden"  class="c_facility_id form-control">
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <input  id ="createdby" name="createdby" type="hidden"  class="createdby form-control">
+
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_update_form" id="close_update_form" ><i class="fa  fa-close"></i>  Cancel </button>
+
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn add_transfers_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Add Transfer</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+    <div class="update_transfers_div" style="display: none;">
+
+        <div class="row update_transfers_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Update Transfer</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Transfer Details</div>
+                    <div class="panel-body">
+                        <h4>Transfer Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal update_transfers_form" id="update_transfers_form" >
+                                    <fieldset>
+
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="update_name" name="name" type="text" placeholder="Transfer name" class="form-control input-md update_name">
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="description"> Description</label>
+                                            <div class="col-md-9">
+
+                                                <textarea class="form-control input-md update_description" id="update_description" name="description" placeholder="Description">
+                                                    
+                                                </textarea>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                        <input  id ="update_createdby" name="createdby" type="hidden"  class="createdby form-control">
+                                        <input  id ="updatedby" name="updatedby" type="hidden"  class="updatedby form-control">
+                                        <input  id ="update_i_transfers_id" name="i_transfers_id" type="hidden" placeholder="Transfer ID  "  class="update_i_transfers_id form-control">
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_update_form" id="close_update_form" ><i class="fa  fa-close"></i>  Cancel </button>
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn update_transfers_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Update Transfer</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+
+

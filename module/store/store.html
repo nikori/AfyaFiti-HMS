@@ -1,0 +1,215 @@
+
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Store/ Store Management</li>
+        </ol>
+    </div><!--/.row-->
+    <div class="row store_table_div">
+        <div class="col-lg-12">
+            <div class="panel-heading">Store Details</div>
+            <div class="panel-body">
+                <div>
+                    <button class="btn btn-info btn-sm add_store_link"><i class="fa fa-plus-square-o "></i> Add Store</button>
+                </div>
+                <hr>
+                <div class="store_results_div">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="add_store_div" style="display: none;">
+
+        <div class="row add_store_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add Store</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Store Details</div>
+                    <div class="panel-body">
+                        <h4>Store Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal add_store_form" id="add_store_form" >
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="id_name" name="name" type="text" placeholder="Store name" class="form-control input-md name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="fname">Facility Name</label>
+                                            <div class="col-md-9">
+                                                <input list="facilities_list" id ="facilities" name="facilities" type="textarea" placeholder="Search by MFL Code" class="facilities form-control">
+                                                <datalist id="facilities_list">
+
+                                                </datalist>
+
+                                                <input  id ="c_facility_id" name="c_facility_id" type="hidden"  class="c_facility_id form-control">
+                                                <input  id ="createdby" name="createdby" type="hidden"  class="createdby form-control">
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <div class="col-md-9">
+                                                <h6>Selected Facility : <span class="selected_facility"></span></h6>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- Marital status input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="is_central">Central Store ? </label>
+                                            <div class="col-md-9">
+                                                <select id="is_central" name="iscentral"   class="form-control input-md is_central">
+                                                    <option value="" selected>Please Select : </option>
+                                                    <option value="Y">Yes</option>
+                                                    <option value="N">No</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_add_form" id="close_add_form" ><i class="fa  fa-close"></i>  Cancel </button>
+
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn add_store_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Add Store</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+    <div class="update_store_div" style="display: none;">
+
+        <div class="row update_store_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Update Store</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Store Details</div>
+                    <div class="panel-body">
+                        <h4>Store Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal update_store_form" id="update_store_form" >
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="update_name" name="name" type="text" placeholder="Store name" class="form-control input-md name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="fname">Facility Name</label>
+                                            <div class="col-md-9">
+                                                <input list="facilities_list" id ="update_facilities" name="facilities" type="textarea" placeholder="Search by MFL Code" class="facilities form-control">
+                                                <datalist id="facilities_list">
+
+                                                </datalist>
+
+                                                <input  id ="update_c_facility_id" name="c_facility_id" type="hidden"  class="c_facility_id form-control">
+                                                <input  id ="update_createdby" name="createdby" type="hidden"  class="createdby form-control">
+                                                <input  id ="updatedby" name="updatedby" type="hidden"  class="updatedby form-control">
+                                                <input  id ="update_m_store_id" name="m_store_id" type="hidden" placeholder="Store ID Holder "  class="m_store_id form-control">
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <div class="col-md-9">
+                                                <h6>Selected Facility : <span class="update_selected_facility"></span></h6>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- Marital status input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="update_is_central">Central Store ? </label>
+                                            <div class="col-md-9">
+                                                <select id="update_is_central" name="iscentral"   class="form-control input-md is_central">
+                                                    <option value="" selected>Please Select : </option>
+                                                    <option value="Y">Yes</option>
+                                                    <option value="N">No</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_update_form" id="close_update_form" ><i class="fa  fa-close"></i>  Cancel </button>
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn update_store_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Update Store</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+
+

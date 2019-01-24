@@ -1,0 +1,233 @@
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <em class="fa fa-home"></em>
+                </a>
+            </li>
+            <li class="active">Admitted Patients</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Bed Management</h1>
+        </div>
+    </div>
+    <!--/.row-->
+
+
+
+    <div class="modal fade" id="AddBeds" tabindex="-1" role="dialog" aria-labelledby="AddBeds" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddBeds">Add  A Bed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" name ="add_bed" method="post" >
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="ward">Ward Location</label>
+                                <div class="col-md-6">
+                                    <!--<select class="form-control b_paymode_id" id="b_paymode_id" name="b_paymode_id">-->
+                                    <select class="form-control wards" id="wards" name="wards" >
+                                    </select>
+                                </div>  
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="ward">Bed Name</label>
+                                <div class="col-md-6">
+                                    <!--<select class="form-control b_paymode_id" id="b_paymode_id" name="b_paymode_id">-->
+                                    <!--                                                    <select class="form-control bed" id="bed" name="bed">
+                                    </select>-->
+                                    <input id="bed_name" name="bed_name" type="text" class="form-control bed_name">
+                                </div>  
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                <a href="javascript:void(0)" class="btn  btn-primary btn-block submit_bed" onclick="AddBed()">Click When Done</a>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="EditBed" tabindex="-1" role="dialog" aria-labelledby="EditBed" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditBed">Edit Bed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" name ="EditBed" id ="EditBed" method="post" >
+                        <!--<form class="form-horizontal EditBed" name ="EditBed" id="EditBed">-->
+                        <fieldset>                    
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="ward">Bed Nme</label>
+                                <div class="col-md-6">
+                                    <!--<select class="form-control b_paymode_id" id="b_paymode_id" name="b_paymode_id">-->
+                                    <!--                                                    <select class="form-control bed" id="bed" name="bed">
+                                    </select>-->
+                                    <input id="bedname" name="bedname" type="text" class="form-control bed_name">
+                                    <!--<h2 id="bed_name"></h2>-->
+                                </div>  
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                <a href="javascript:void(0)" class="btn  btn-primary submit_bed" onclick="UpdateBedName()">Submit</a>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!--<button type="button" class="btn btn-primary  fa fa-bed" data-toggle="modal" data-target="#addbedmodal"> Add Bed</button>-->
+                    <button type="button" class="btn btn-primary fa fa-bed" data-toggle="modal" data-target="#AddBeds">Add Bed</button>
+                    <!--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>-->
+
+                </div>
+            </div><!--/.row-->
+            <div class="panel panel-default">
+                <!--<div class="panel-heading">Inpatient</div>-->
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body tabs">
+                                            <ul class="nav nav-tabs">
+                                                <!--                                            <li>
+                                                                                                <a href="#tab0" data-toggle="tab">Diagnoses</a>
+                                                                                            </li>-->
+                                                <li class="active">
+                                                    <a href="#tab11" data-toggle="tab1">Male Ward</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="#tab3" data-toggle="tab">Female Ward</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab4" data-toggle="tab">Labour Ward</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab5" data-toggle="tab">Maternity Ward</a>
+                                                </li>
+                                                
+
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active" id="tab11">
+                                                    <!--<h4>Vitals</h4>-->
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">                                                           
+                                                            <table class="table table-hover" id="maleward">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Bed Name</th>                                                                                                
+                                                                        <th>Bed Location</th>
+                                                                        <th>Bed Status</th>
+                                                                        <th>Edit Bed</th>    
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="tab-pane fade" id="tab3">
+                                                    <table class="table table-hover" id="femaleward">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Bed Name</th>                                                                                                
+                                                                <th>Bed Location</th>
+                                                                <th>Bed Status</th>
+                                                                <th>Edit Bed</th>    
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab4">
+                                                    <table class="table table-hover" id="labourward">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Bed Name</th>                                                                                                
+                                                                <th>Bed Location</th>
+                                                                <th>Bed Status</th>
+                                                                <th>Edit Bed</th>    
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab5">
+                                                    <table class="table table-hover" id="maternityward">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Bed Name</th>                                                                                                
+                                                                <th>Bed Location</th>
+                                                                <th>Bed Status</th>
+                                                                <th>Edit Bed</th>    
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.panel-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+
+                        </div>
+                        <!--/.row-->
+                        <div class="col-sm-12">
+                            <p class="back-link">Developed by
+                                <a href="#">� 2017 mhealthkenya.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--/.row-->
+            <div class="col-sm-12">
+                <p class="back-link">Developed by
+                    <a href="#">� 2017 mhealthkenya.com</a>
+                </p>
+            </div>
+        </div>
+        <!--/.row-->

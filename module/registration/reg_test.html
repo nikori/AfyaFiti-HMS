@@ -1,0 +1,234 @@
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Patient Registration/ Register Patient</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Register Patient</h1>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body tabs" id="tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Patient Details</a></li>
+                        <li ><a href="#tab2" id="kin_tab">Next-of-Kin Details</a></li>
+                        <li ><a href="#tab3" id="insurance_tab">Insurance Details</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1">
+
+                            <div class="col-md-12">
+                                <div class="panel panel-primary">
+                                    <!--<div class="panel-heading">Personal Details</div>-->
+                                    <div class="panel-body">
+                                        <h4>Enter Personal Details</h4>
+                                        <h6><u><b>NB :</b> Inputs marked with ( * ) are mandatory</u></h6>
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <form class="add_registration_form" id="add_registration_form" >
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-4 required">
+                                                            <label for="firstname">First Name</label>
+                                                            <input id="firstname" name="firstname" type="text" placeholder="Your first name" class="form-control input-md firstname" required>
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="middlename">Middle Name</label>
+                                                            <input id="middlename" name="middlename" type="text" placeholder="Your middle name" class="form-control input-md middlename" >
+                                                        </div>
+                                                        <div class="form-group col-md-4 required">
+                                                            <label for="lastname">Last Name</label>
+                                                            <input id="lastname" name="lastname" type="text" placeholder="Your last name" class="form-control input-md lastname" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 required">
+                                                            <label for="gender">Gender</label>
+                                                            <select class="form-control input-md gender" id="gender" name="gender" required>
+                                                                <option value="" selected>Select Gender</option>
+                                                                <option value="male">Male</option>
+                                                                <option value="female">Female</option>
+                                                                <option value="other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-md-6 required">
+                                                            <label for="maritalstatus">Marital Status</label>
+                                                            <select class="form-control input-md maritalstatus" id="maritalstatus" name="maritalstatus" required>
+                                                                <option value="" selected>Select Status</option>
+                                                                <option value="single">Single</option>
+                                                                <option value="married">Married</option>
+                                                                <option value="divorced">Divorced</option>
+                                                                <option value="widow">Widow</option>
+                                                            </select>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 required">
+                                                            <label for="inputPassword4">Date Of Birth</label>
+                                                            <input id="id_dob" name="dob" type="date" class="form-control input-md dob" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="nhifno">NHIF number</label>
+                                                            <input id="nhifno" name="nhifno" type="text" placeholder="NHIF number" class="form-control input-md nhifno">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6 required">
+                                                            <label for="idnumber">Id Number / Passport Number</label>
+                                                            <input id="idnumber" name="idnumber" type="text" placeholder="Your ID number" class="form-control input-md idnumber" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 required">
+                                                            <label for="phoneno">Phone number</label>
+                                                            <input id="phoneno" name="phoneno" maxlength="10" type="tel" placeholder="Phone number" class="form-control input-md phoneno" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="occupation">Occupation</label>
+                                                            <input id="id_occupation" name="occupation" type="text" placeholder="Your occupation" class="form-control input-md occupation">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="email">Email Address</label>
+                                                            <input id="id_email" name="email" type="text" placeholder="Email address" class="form-control input-md email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">                                                        
+                                                        <div class="form-group col-md-6">
+                                                            <label for="physicaladdress">Physical Address</label>
+                                                            <input id="physicaladdress" name="physicaladdress" type="text" placeholder="physical address" class="form-control input-md physicaladdress">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="postaladdress">Postal Address</label>
+                                                            <input id="postaladdress" name="postaladdress" type="text" placeholder="Your Postal address" class="form-control input-md postaladdress">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="postalcode">Postal Code</label>
+                                                            <input id="postalcode" name="postalcode" type="text" placeholder="Location" class="form-control input-md id_postalcode">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="town">Town</label>
+                                                            <input id="town" name="town" type="text" placeholder="Your town" class="form-control input-md town">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-2">
+                                                            <label for="iscorporate">Is Corporate?</label>
+                                                            <input id="iscorporate" name="iscorporate" type="checkbox" class="form-control iscorporate" onchange="toggleStatus()"/>
+                                                        </div>
+                                                        <div class="form-group col-md-4" id="a_num">
+                                                            <label for="account">Select Corporate Account</label>
+                                                            <select class="form-control department_id" id="department_id" name="account_id" disabled>
+
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-md-4" id="p_num">
+                                                            <label for="employment_number">Employee Number</label>
+                                                            <input id="employment_number" name="employment_number" type="text" placeholder="Employee number" class="form-control input-md employment_number" disabled>
+                                                        </div>  
+                                                        <div class="form-group col-md-2" id="is_dep">
+                                                            <label for="isdependent">Is Dependant?</label>
+                                                            <input id="isdependent" name="isdependent" type="checkbox" class="form-control isdependent" disabled/>
+                                                        </div>
+                                                        <input type="hidden" name="createdby" class="reg_createdby form-control" id="reg_createdby" />
+                                                        <input type="hidden" name="updatedby" class="reg_updatedby form-control" id="reg_updatedby" />
+                                                        <input type="hidden" name="c_facility_id" class="reg_c_facility_id form-control" id="reg_c_facility_id" />
+                                                    </div>                
+                                                    <button type="submit" class="btn btn-primary btn-md pull-right submit-btn add_register" id="submit-btn" >Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3 required">
+                                        <label for="kin_name">Names </label>
+                                        <input type="text" class="form-control kin_name" id="kin_name" name="kin_name" placeholder="Kin's Names" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3 required">
+                                        <label for="kin_ralation">Relationship</label>
+                                        <input type="text" class="form-control kin_ralation" id="kin_ralation" name="kin_ralation" placeholder="Kin's ralationship" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3 required">
+                                        <label for="kin_phone">Phone Number</label>
+                                        <input type="text" class="form-control kin_phone" id="kin_phone" name="kin_phone" placeholder="Kin's phone number" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <!-- Form actions -->
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-center">
+                                                    <button type="button" class="btn btn-primary btn-md pull-right submit-btn add_kin" id="submit-btn" >Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="tab3">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 required">
+                                        <label for="provider">Insurance provider name</label>
+                                        <input type="text" class="form-control provider" id="provider" name="provider" placeholder="Insurance provider name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3 required">
+                                        <label for="membership">Membership Number</label>
+                                        <input type="text" class="form-control membership" id="membership" name="membership" placeholder="Membership Number" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 required">
+                                        <label for="company">Employer Name</label>
+                                        <input id="company" name="company" type="text" placeholder="Your company name" class="form-control input-md company" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="expiry">Expiry date</label>
+                                        <input id="expiry" name="expiry" type="date" class="form-control input-md expiry">
+                                    </div>                                    
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <!-- Form actions -->
+                                            <div class="form-group">
+                                                <div class="col-md-12 widget-center">
+                                                    <button type="button" class="btn btn-primary btn-md pull-right submit-btn add_insurance" id="submit-btn" >Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.panel-->
+        </div><!--/.col-->
+    </div><!-- /.row -->
+
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mhealth Kenya - medassist</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/datepicker3.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/gdialog.css" rel="stylesheet">
+        <link href="css/datatables.min.css" rel="stylesheet">
+        <link href="css/appointment-calendar.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery.css">
+        <link href="css/fullcalendar.min.css" type="text/css" rel="stylesheet" />
+        <link href="css/required.css" type="text/css" rel="stylesheet" />
+
+        <script type="text/javascript" src="js/datatables.min.js"></script>
+        <!--Custom Font-->
+        <!--        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
+        <link href="css/googleapis.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span></button>
+                    <a class="navbar-brand" href="#"><span>Medassist</span> - management system </a>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="btn btn-danger logout_link"><i class="fa fa-sign-out logout_link" aria-hidden="true"></i>Logout</a>
+                        </li>
+                    </ul>				
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div id="sidebar-collapse" class="col-sm-4 col-lg-2 sidebar">		
+            <span>
+                <!-- dark Logo text -->
+                <img src="images/mHealth-Logo.png" />
+            </span>
+            <div class="divider"></div>
+            <ul class="nav menu">
+                <li class="active" ><a href="javascript:void(0)" class="dashboard_menu" id="dashboard_menu"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+                <li ><a href="javascript:void(0)" class="registration_menu"><em class="fa fa-user m-r-10">&nbsp;</em>Registration</a></li>
+                <!--                                <li class="parent" style="display: none" id="pregmenu"><a data-toggle="collapse" href="#sub-item-patients_reg">
+                                                        <em class="fa fa-user m-r-10">&nbsp;</em> Registration <span data-toggle="collapse" href="#sub-item-patients_reg" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                                                    </a>
+                                                    <ul class="children collapse" id="sub-item-patients_reg">
+                                                        <li><a class="registration_menu" href="javascript:void(0)">
+                                                                <span class="fa fa-arrow-right">&nbsp;</span> Register Patients
+                                                            </a></li>
+                                                        <li><a class="visit_menu" href="javascript:void(0)">
+                                                                <span class="fa fa-arrow-right">&nbsp;</span>  Book Visit
+                                                            </a></li>
+                                                    </ul>
+                                                </li>
+                                            <li class="parent"><a data-toggle="collapse" href="#sub-item-inpatient">
+                                                    <em class="fa fa-stethoscope m-r-10">&nbsp;</em> Inpatient Service <span data-toggle="collapse" href="#sub-item-inpatient" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                                                </a>
+                                                <ul class="children collapse" id="sub-item-inpatient">
+                                                    <li><a class="error_page" href="javascript:void(0)">
+                                                            <span class="fa fa-arrow-right">&nbsp;</span> Triage
+                                                        </a></li>
+                                                    <li><a class="error_page" href="javascript:void(0)">
+                                                            <span class="fa fa-arrow-right">&nbsp;</span> Consultation
+                                                        </a></li>
+                                                    <li><a class="error_page" href="javascript:void(0)">
+                                                            <span class="fa fa-arrow-right">&nbsp;</span> Admission 19168571
+                                                        </a></li>
+                                                </ul>
+                                            </li>-->
+                <li class="parent" style="display: none" id="outpmenu"><a data-toggle="collapse" href="#sub-item-outpatient">
+                        <em class="fa fa-stethoscope m-r-10">&nbsp;</em> Outpatient <span data-toggle="collapse" href="#sub-item-outpatient" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-outpatient">                    
+                        <li><a class="triage_outpatient_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Triage
+                            </a></li>
+                        <li><a class="consultation_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Consultation
+                            </a></li>
+                        <li><a class="laboratory_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Laboratory
+                            </a></li>
+                        <li><a class="radiology_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Radiology
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="parent" style="display: none" id="inpmenu"><a data-toggle="collapse" href="#sub-item-inpatient">
+                        <em class="fa fa-bed m-r-10">&nbsp;</em> Inpatient <span data-toggle="collapse" href="#sub-item-inpatient" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-inpatient">                    
+                        <li><a class="inpat_mgt" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Inpatient Queue
+                            </a></li>
+                        <li><a class="admitted_mgt" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Manage Inpatients
+                            </a></li>
+                        <li><a class="bed_mgt" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Manage Beds
+                            </a></li>
+<!--                            <li><a class="addbed" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Add Bed
+                            </a></li>-->
+                    </ul>
+                </li>
+                <li class="parent" style="display: none" id="specialclinicmenu"><a data-toggle="collapse" href="#sub-item-specialclinic">
+                        <em class="fa fa-briefcase m-r-10">&nbsp;</em> Special Clinics <span data-toggle="collapse" href="#sub-item-specialclinic" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-specialclinic">                    
+                        <li><a class="dental_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Dental Services
+                            </a></li>
+                        <li><a class="eye_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> ENT Services
+                            </a></li>
+                        <li ><a class="parent" data-toggle="collapse" href="#sub-maternity">
+                                <span class="fa fa-plus">&nbsp;</span> Maternal Services
+                            </a>
+                            <ul class="children collapse" id="sub-maternity"> 
+                                <li><a class="" href="javascript:void(0)">
+                                        <span class="fa fa-arrow-circle-o-right">&nbsp;</span> Triage
+                                    </a></li>
+                                <li><a class="maternal_menu" href="javascript:void(0)">
+                                        <span class="fa fa-arrow-circle-o-right">&nbsp;</span> Consultation
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li><a class="pysio_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Physiotherapy
+                            </a></li>
+                        <li><a class="nutrition_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Nutrition Services
+                            </a></li>
+                        <li><a class="counselling_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> General Counselling
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="parent" style="display: none" id="pharmacymenu"><a data-toggle="collapse" href="#sub-item-materials">
+                        <em class="fa fa-book m-r-10">&nbsp;</em>Pharmacy<span data-toggle="collapse" href="#sub-item-materials" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-materials">
+                        <!--                        <li><a class="error_page" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Received Goods
+                                                    </a></li>
+                                                <li><a class="error_page" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Pharmacy Stock
+                                                    </a></li>
+                                                <li><a class="error_page" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Dispense to ward
+                                                    </a></li>-->
+                        <li><a class="pharmacy_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Dispense Drug
+                            </a></li>
+                        <!--                        <li><a class="error_page" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Cash Sales
+                                                    </a></li>-->
+                    </ul>
+                </li>
+                <li class="parent" style="display: none" id="financemenu"><a data-toggle="collapse" href="#sub-item-finance">
+                        <em class="fa fa-money m-r-10">&nbsp;</em> Finance <span data-toggle="collapse" href="#sub-item-finance" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-finance">
+                        <li><a class="reg_bill_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Reg Payment
+                            </a></li>
+                        <li><a class="pharmacy_bill_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Pharmacy Payment
+                            </a></li>
+
+                        <li><a class="lab_bill_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Lab Payment
+                            </a></li>
+                        <li><a class="radiology_bill_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Radiology Payment
+                            </a></li>
+
+                        <li><a class="clinic_bill_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Clinic Payment
+                            </a></li>
+
+                    </ul>
+                </li>
+
+                <li class="parent" style="display: none" id="appmenu"><a data-toggle="collapse" href="#sub-item-appointment">
+                        <em class="fa fa-calendar m-r-10">&nbsp;</em> Appointments <span data-toggle="collapse" href="#sub-item-appointment" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-appointment">
+                        <li><a class="book_appointments" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Book appointment
+                            </a></li>
+                        <li><a class="view_appointments" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> View appointments
+                            </a></li>
+                    </ul>
+                </li>
+
+                <li class="parent" style="display: none" id="invmenu"><a data-toggle="collapse" href="#sub-item-inventory">
+                        <em class="fa fa-vcard m-r-10">&nbsp;</em>Inventory
+                        <span data-toggle="collapse" href="#sub-item-inventory" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-inventory">
+                        <!--                        <li><a class="test_reg" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Stock Orders
+                                                    </a></li>
+                                                <li><a class="error_page" href="javascript:void(0)">
+                                                        <span class="fa fa-arrow-right">&nbsp;</span> Available Stock
+                                                    </a></li>-->
+                        <li><a class="store_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Store management
+                            </a></li>
+                        <li><a class="uom_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Unit of Measure
+                            </a></li>
+                        <li><a class="product_group_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Product Grouping 
+                            </a></li>
+                        <li><a class="product_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Product  
+                            </a></li>
+                        <li><a class="supplier_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Supplier  
+                            </a></li>
+                        <li><a class="grn_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> GRN  
+                            </a></li>
+                        <li><a class="grn_line_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> GRN  Line
+                            </a></li>
+                        <li><a class="transfer_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Transfers
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="parent" style="display: none" id="repmenu" ><a data-toggle="collapse" href="#sub-item-reports">
+                        <em class="fa fa-bar-chart m-r-10">&nbsp;</em>Reports
+                        <span data-toggle="collapse" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-reports">
+                        <li><a class="patients_report_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Patients Report
+                            </a></li>
+                        <li><a class="lab_report_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Laboratory Report
+                            </a></li>
+                        <li><a class="pharmacy_report_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Pharmacy Report
+                            </a></li>
+                        <li><a class="accounts_report_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Accounts Report
+                            </a></li>
+                        <li><a class="inventory_report_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Inventory Report
+                            </a></li>
+                    </ul>
+                </li>
+                <!--<li style="display: none" id="hospmenu" ><a class="error_page" href="javascript:void(0)"><em class="fa fa-columns m-r-10">&nbsp;</em>Hospital Admin</a></li>-->
+                <li class="parent" style="display: none" id="confmenu"><a data-toggle="collapse" href="#sub-item-config">
+                        <em class="fa fa-cogs m-r-10">&nbsp;</em>System Config
+                        <span data-toggle="collapse" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-config">
+                        <li><a class="users_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> User mgnt
+                            </a></li>
+                        <li><a class="accounts_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Account mgnt
+                            </a></li>
+                        <li><a class="product_price_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Product Pricing
+                            </a></li>
+                        <li><a class="service_price_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Service Pricing
+                            </a></li>
+                        <li><a class="payment_mode_menu" href="javascript:void(0)">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Payment Mode
+                            </a></li>
+
+                    </ul>
+                </li>  
+            </ul>
+        </div><!--/.sidebar-->
+
+
+        <div class="main_body" id="main_body">
+
+            <!-- Modules will be loaded here  -->
+
+        </div>
+
+        <!--/.main-->
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/chart.min.js"></script>
+        <script src="js/chart-data.js"></script>
+        <script src="js/easypiechart.js"></script>
+        <script src="js/easypiechart-data.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.session.js"></script>
+        <!--<script src="js/jquery.dialog.js"></script>-->
+        <script src="js/gdialog.js"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
+        <!--<script src="js/sweetalert2.js"></script>-->
+
+
+        <!--<script src="http://code.jquery.com/jquery-2.1.3.js"></script>-->
+        <script src="js/jquery-ui.js"></script>
+
+        <!-- added highcharts scripts -->
+        <script src="js/highcharts.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/highcharts-3d.js"></script>
+        <script src="js/exporting.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/fullcalendar.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/alasql.min.js"></script>
+        <script src="js/pdf_js/pdfmake.min.js"></script>
+        <script src="js/pdf_js/vfs_fonts.js"></script>
+        <script src="js/datatable/datatables.min.js"></script>
+        <script src="js/config/config.js"></script>
+        <script src="js/module_js/menu.js"></script>
+        <script src="js/module_js/dashboard.js"></script>
+        <script src="js/module_js/registration.js"></script>
+        <script src="js/module_js/users.js"></script>
+        <script src="js/module_js/accounts.js"></script>
+        <script src="js/module_js/visit.js"></script>
+        <script src="js/module_js/triage.js"></script>
+        <script src="js/module_js/consultation.js"></script>
+        <script src="js/module_js/lab.js"></script>
+        <script src="js/module_js/radiology.js"></script>
+        <script src="js/module_js/finance.js"></script>
+        <script src="js/module_js/appointment.js"></script>
+        <script src="js/module_js/pharmacy.js"></script>
+        <script src="js/module_js/reports.js"></script>
+        <script src="js/module_js/dental.js"></script>
+        <script src="js/module_js/ent.js"></script>
+        <script src="js/module_js/maternity.js"></script>
+        <script src="js/module_js/physio.js"></script>
+        <script src="js/module_js/nutrition.js"></script>
+        <script src="js/module_js/counselling.js"></script>
+        <script src="js/module_js/inpatient.js"></script>
+
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                load_menu();
+
+            });
+
+            function load_patients() {
+                console.log("Inside load_patients");
+                $(".patients_report_link").click(function () {
+                    $("#main_body").empty();
+                    $("#modal_loading").modal("show");
+                    $("#main_body").load("module/reports/patients-report.html", function () {
+                        loadpatients();
+                        search_visits();
+                    });
+                });
+            }
+
+        </script>
+
+        <script src="js/jquery-1.8.3.js"></script>
+        <script>var $j = jQuery.noConflict(true);</script>
+
+    </body>
+</html>

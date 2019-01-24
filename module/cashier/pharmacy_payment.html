@@ -1,0 +1,258 @@
+        
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Finance/ Pharmacy Payment</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Pharmacy Payment</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="row" id="disppharmacydetails">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Patients</div>
+                <div class="panel-body btn-margins">
+                    <div class="col-md-12">
+                        <table class="table table-hover" id="mregtable">
+                            <thead>
+                                <tr>
+                                    <th>Visit Number</th>
+                                    <th>Patient Name</th>                              
+                                   
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+
+
+
+
+
+
+
+<!-- the hidden tabbed window, to be displayed on click of proceed-->
+
+    <div id="divpharmacypayment" style="display:none">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#pharmacybilltab" data-toggle="tab">Pharmacy Billing</a></li>
+                            <li><a href="#pharmacyhisttab" data-toggle="tab">Pharmacy Billing History</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="pharmacybilltab">
+                                <h4></h4>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="col-md-12" id="pharmacybill_tablediv">
+
+                                            <!--                                            <div class="row" style="margin-top: 2px">
+                                                                                            <div class="col-md-12" style="text-align: center;">
+                                            
+                                                                                                PATIENT DETAILS:
+                                            
+                                                                                            </div>
+                                                                                        </div>-->
+                                            <div style="border:thin solid black;padding:10px">
+                                                <div class="row" style="margin-top: 20px">
+
+                                                    <div class="col-md-3"><h6><u><b>Patient Details:</b></u></h6></div>
+                                                </div>
+                                                <div class="row" style="margin-top: 20px">
+
+                                                    <div class="col-md-3">Patient Names :</div>
+                                                    <div class="col-md-9" id="patientname">names here</div>
+                                                </div>
+                                                
+                                                <div class="row" style="margin-top: 20px">
+
+                                                    <div class="col-md-3">Visit Number :</div>
+                                                    <div class="col-md-9" id="visitnumber">visit here</div>
+                                                </div>
+                                               
+                                                                                                                                                                                                
+                                                <!-- <div class="row" style="margin-top: 20px">
+
+                                                    <div class="col-md-3">Visit Date :</div>
+                                                    <div class="col-md-9" id="pdate">date here</div>
+                                                </div> -->
+
+
+
+
+                                                <div class="row" style="margin-top: 30px">
+                                                    <div class="col-md-12">
+                                                    <!-- table data here -->
+
+                                                    <div> 
+
+                                                        <table id="pharmacyDetailsTable" class="table table-hover">
+                                                            <thead> 
+                                                                <tr>
+                                                                    <th>Product Name</th>
+                                                                    <th>Dosage</th>
+                                                                    <th>Dispense Quantity</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th>Amount</th>
+                                                                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+
+                                                    </div>
+                                                    <!-- table data here -->
+
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="row" style="margin-top: 20px">
+
+                                                    <div class="col-md-3"><h6><u><b>Payment Details:</b></u></h6></div>
+                                                </div>
+
+                                                
+
+                                                <div class="row">
+                                                    <div class="col-md-3"><h6><b>Total Bill:</b></h6></div>
+                                                    <div class="col-md-9" id="totalbill">kshs 200</div>
+
+                                                </div>
+
+                                                <div class="row" style="margin-top: 20px">
+                                                    <div class="col-md-3">
+                                                        <select class="form-control" id="paymentmodes" required>
+                                                            <option selected disabled>Select Payment mode</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="number" id="amountpaidpharmacybill" class="form-control" placeholder="Enter Amount">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button class="btn btn-primary" onclick="addPaymentMode()"><i class="fa fa-plus"></i>Add Payment Mode</button>
+                                                    </div>
+                                                </div>
+
+                                                 <div class="row" id="extrapaymentmode" style="margin-top: 20px;display:none;">
+                                                    <div class="col-md-3">
+                                                        <select class="form-control" id="paymentmodes2" required>
+                                                            <option selected disabled>Select Payment mode</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="number" id="amountpaidpharmacybill2" class="form-control" placeholder="Enter Amount">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button class="btn btn-danger" onclick="removePaymentMode()"><i class="fa fa-times" style="font-size:24px;color:white"></i></button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="margin-top: 20px">
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control" id="usercomments" placeholder="Transaction comments" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="row">
+                                                    <input type="hidden" id="hiddenbillid">
+
+
+                                                </div> -->
+
+                                                <div class="row" style="margin-top: 20px">
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary pull-right" onclick="payPharmacyBill()">Pay Bill</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div id="end_visit"> </div>
+                            </div> 
+                            <div class="tab-pane fade" id="pharmacyhisttab">
+                                <div class="panel-group" id="accordion">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">PHARMACY PAYMENT HISTORY</div>
+                                                <div class="panel-body btn-margins">
+                                                    <div class="col-md-12">
+                                                        <table class="table table-hover" id="pharmacyhistorytable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Patient Name</th>
+                                                                    <th>Patient Code</th>
+                                                                    <th>Visit Number</th>
+                                                                    <th>Product</th>
+                                                                    <th>Amount To Pay</th>
+                                                                    <th>Amount Paid</th>
+                                                                    <th>Balance</th>
+                                                                    <th>Mode Of Payment</th>
+                                                                    <th>Date Paid</th>
+
+
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--/.row-->
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>                                           
+                        </div>
+                    </div>
+                </div><!--/.panel-->
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div>
+
+
+    <!-- the hidden tabbed window, to be displayed on click of proceed-->
+
+
+
+
+    
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+

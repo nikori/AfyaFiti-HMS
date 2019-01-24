@@ -1,0 +1,223 @@
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Patient Registration/ Edit Patient Details</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Edit Patient Details</h1>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Personal Details</div>
+                <div class="panel-body">
+                    <!--                    <h4>Personal Details</h4>-->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal" action="" method="post">
+                                <fieldset>
+                                    <!-- Name input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="fname">First Name</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_fname" name="edit_fname" type="text" placeholder="Your first name" class="form-control input-md edit_fname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="lname">Last Name</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_lname" name="edit_lname" type="text" placeholder="Your last name" class="form-control input-md edit_lname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="mname">Middle Name</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_mname" name="edit_mname" type="text" placeholder="Your middle name" class="form-control input-md edit_mname">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="mname">ID Number</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_num" name="edit_num" type="text" placeholder="Your ID number" class="form-control input-md edit_num">
+                                        </div>
+                                    </div>
+                                    <!-- DOB input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="dob">Date of Birth</label>
+                                        <div class="col-md-9">													
+                                            <input id="edit_dob" name="edit_dob" type="text" placeholder="Date of birth" class="form-control input-md edit_dob">
+                                        </div>
+                                    </div>
+                                    <!-- Marital status input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="status">Marital status</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control input-md edit_status" id="edit_status" name="edit_status">
+                                                <option value="" selected>Select Status</option>
+                                                <option value="single">Single</option>
+                                                <option value="married">Married</option>
+                                                <option value="divorced">Divorced</option>
+                                                <option value="widow">Widow</option>
+                                            </select>
+                                            <!-- <input id="id_status" name="status" type="text" placeholder="Marital status" class="form-control input-md status"> -->
+                                        </div>
+                                    </div>
+
+                                    <!-- gender input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="gender">Your gender</label>
+                                        <div class="col-md-9">
+                                            <select class="form-control input-md edit_gender" id="edit_gender" name="edit_gender">
+                                                <option value="" selected>Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <!-- <input id="id_gender" name="gender" type="text" placeholder="Your gender" class="form-control input-md gender"> -->
+                                        </div>
+                                    </div>
+                                    <!-- Name input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="occupation">Occupation</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_occupation" name="edit_occupation" type="text" placeholder="Your occupation" class="form-control input-md edit_occupation">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Contact Details</div>
+                <div class="panel-body">
+                    <!--<h4>Contact Details</h4>-->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal edit_registration" action="" method="post" id="edit_registration">
+                                <fieldset>
+                                    <!-- Email input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="email">Email address</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_email" name="edit_email" type="text" placeholder="Email address" class="form-control input-md edit_email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="phone">Phone Number</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_phone" name="edit_phone" type="text" placeholder="Phone number" class="form-control input-md edit_phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="postal">Postal Address</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_postal" name="edit_postal" type="text" placeholder="Your Postal address" class="form-control input-md edit_postal">
+                                        </div>
+                                    </div>
+                                    <!-- DOB input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="physical">Physical Address</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_physical" name="edit_physical" type="text" placeholder="physical address" class="form-control input-md edit_physical">
+                                        </div>
+                                    </div>
+                                    <!-- postal code input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="location">Postal Code</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_postalcode" name="edit_postalcode" type="text" placeholder="Postal Code" class="form-control input-md edit_postalcode">
+                                        </div>
+                                    </div>
+                                    <!-- gender input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="town">Town</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_town" name="edit_town" type="text" placeholder="Your town" class="form-control input-md edit_town">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="nhif">NHIF Number</label>
+                                        <div class="col-md-9">
+                                            <input id="edit_nhif" name="edit_nhif" type="text" placeholder="NHIF number" class="form-control input-md edit_nhif">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="visibility: hidden">
+                                        <label class="col-md-3 control-label" for="c_patient_id"></label>
+                                        <div class="col-md-9">
+                                            <input id="c_patient_id" name="c_patient_id" type="text" placeholder="" class="form-control input-md c_patient_id">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.row -->
+    <div class="row"><!--corporate details remain hidden for the patient that are not corporate -->
+        <!--<div class="col-md-12 edit_account_div" style="display: none;">-->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-12 widget-center">
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="edit_iscorporate">Is Corporate?</label>
+                                    <input id="edit_iscorporate" name="edit_iscorporate" type="checkbox" class="form-control edit_iscorporate" onchange="toggleStatus()"/>
+                                </div>
+                                <div class="form-group col-md-4" id="edit_a_num">
+                                    <label for="edit_account">Select Corporate Account</label>
+                                    <select class="form-control department_id" id="department_id" name="edit_account_id" disabled>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4" id="edit_p_num">
+                                    <label for="edit_employment_number">Employee Number</label>
+                                    <input id="edit_employment_number" name="edit_employment_number" type="text" placeholder="Employee number" class="form-control input-md edit_employment_number" disabled>
+                                </div>  
+                                <div class="form-group col-md-2" id="edit_is_dep">
+                                    <label for="edit_isdependent">Is Dependant?</label>
+                                    <input id="edit_isdependent" name="edit_isdependent" type="checkbox" class="form-control edit_isdependent" disabled/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-12 widget-center">
+                                <button type="submit" class="btn btn-default btn-md pull-left edit_cancel-btn" id="edit_cancel-btn" >Cancel Edit</button>
+                                <button type="submit" class="btn btn-default btn-md pull-right edit_submit-btn" id="edit_submit-btn" >Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+        <div class="col-sm-12">
+            <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+        </div>
+    </div><!--/.row-->

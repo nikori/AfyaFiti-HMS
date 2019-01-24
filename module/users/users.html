@@ -1,0 +1,374 @@
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    <em class="fa fa-home"></em>
+                </a>
+            </li>
+            <li class="active">Users</li>
+        </ol>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">User Management</h1>
+        </div>
+
+    </div>
+    <!--/.row-->
+
+    <div class="col-lg-12 user_table_div">
+
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <button class="btn btn-info pull-left btn-sm add_user_btn">
+                    <i class="fa fa-plus-square-o "></i> Add User</button>
+                <button class="btn btn-info pull-right btn-sm manage_role_btn">
+                    <i class="fa fa-plus-square-o "></i>Manage Roles</button>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+
+                <div class="panel-body btn-margins">
+
+                    <div class="col-md-12 ">
+
+                        <table class="table table-hover " id="mpattable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Facility</th>
+                                    <th>Role</th>
+                                    <th>Created</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+    <!--/.row-->
+
+
+    <div class="col-lg-12 role_table_div" style="display: none;">
+
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <button class="btn btn-info pull-left btn-sm add_role_btn">
+                    <i class="fa fa-plus-square-o "></i> Add Role</button>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+
+                <div class="panel-body btn-margins">
+
+                    <div class="col-md-12 ">
+
+                        <table class="table table-hover " id="roletable">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
+
+
+    <div class="update_user_div" style="display: none;">
+
+        <div class="row update_user_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Update User</h1>
+            </div>
+        </div>
+        <!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">User Details</div>
+                    <div class="panel-body">
+                        <h4>User Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal update_user_form" id="update_user_form">
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="update_name" name="name" type="text" placeholder="User name" class="form-control input-md update_name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Email</label>
+                                            <div class="col-md-9">
+                                                <input id="update_email" name="email" type="email" placeholder="Email " class="form-control input-md update_email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Facility</label>
+                                            <div class="col-md-9">
+                                                <input list="update_facility" id="upd_facility" name="facility" type="text" placeholder="" class="dis form-control">
+                                                <datalist id="update_facility">
+
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Role</label>
+                                            <div class="col-md-9">
+                                                <input list="update_role" id="upd_role" name="role" type="text" placeholder="Role" class="form-control input-md update_c_role_id">
+                                                <datalist id="update_role">
+
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Status</label>
+                                            <div class="col-md-9">
+                                                <input list="update_status" id="update_isactive" name="isactive" type="text" placeholder="Status " class="form-control input-md update_isactive">
+                                                <input id="update_user_id" name="c_user_id" type="hidden" placeholder="User ID" value="" class="update_user_id form-control">
+                                                <datalist id="update_status">
+                                                    <option value="Active">
+                                                        <option value="Inactive">
+                                                </datalist>
+                                            </div>
+                                        </div>
+
+                                        <input id="updated_createdby" name="createdby" type="hidden" class="createdby form-control">
+                                        <input id="updatedby_updated" name="updatedby" type="hidden" class="updatedby form-control">
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close-user-update">
+                                                    <i class="fa  fa-close"></i> Cancel </button>
+                                                <button type="button" class="btn btn-default btn-md pull-right user-update">
+                                                    <i class="fa  fa-save"></i> Update User</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+
+
+
+
+    <div class="add_user_div" style="display: none;">
+
+        <div class="row add_user_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add User</h1>
+            </div>
+        </div>
+        <!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add User Details</div>
+                    <div class="panel-body">
+                        <h4>User Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal add_user_form" id="add_user_form">
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Title</label>
+                                            <div class="col-md-9">
+                                                <input id="add_title" name="add_title" type="text" placeholder="Title" class="form-control input-md add_title">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="add_name" name="add_name" type="text" placeholder="User name" class="form-control input-md add_name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Email</label>
+                                            <div class="col-md-9">
+                                                <input id="add_email" name="add_email" type="email" placeholder="Email " class="form-control input-md add_email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Password</label>
+                                            <div class="col-md-9">
+                                                <input id="add_password" name="add_password" type="password" placeholder="" class="form-control input-md add_password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Description</label>
+                                            <div class="col-md-9">
+                                                <input id="add_description" name="add_description" type="textarea" placeholder="add_description " class="form-control input-md add_description">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Facility</label>
+                                            <div class="col-md-9">
+                                                <input list="add_facility" id="ad_facility" name="add_facility" type="text" placeholder="" class="dis form-control">
+                                                <datalist id="add_facility">
+
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Role</label>
+                                            <div class="col-md-9">
+                                                <input list="add_role" id="ad_role" name="add_role" type="text" placeholder="Role" class="form-control input-md add_role">
+                                                <datalist id="add_role">
+
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Status</label>
+                                            <div class="col-md-9">
+                                                <input list="add_status" id="ad_isactive" name="add_status" type="text" placeholder="Status " class="form-control input-md add_status">
+                                                <input id="add_user_id" name="add_user_id" type="hidden" placeholder="User ID" value="" class="add_user_id form-control">
+                                                <datalist id="add_status">
+                                                    <option value="Active">
+                                                        <option value="Inactive">
+                                                </datalist>
+                                            </div>
+                                        </div>
+
+                                        <input id="add_createdby" name="add_createdby" type="hidden" class="add_createdby form-control">
+                                        <input id="add_updatedby" name="add_updatedby" type="hidden" class="add_updatedby form-control">
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close-user-update">
+                                                    <i class="fa  fa-close"></i> Cancel </button>
+                                                <button type="button" class="btn btn-default btn-md pull-right add-user">
+                                                    <i class="fa  fa-save"></i> Add User</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+
+
+    <div class="add_role_div" style="display: none;">
+
+        <div class="row add_role_description">
+            <div class="col-lg-12">
+            </div>
+        </div>
+        <!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add Role</div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal add_role_form" id="add_role_form">
+                                    <fieldset>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="add_role_name" name="rol_name" type="text" placeholder="User name" class="form-control input-md add_role_name">
+                                            </div>
+                                        </div>
+                                        <input id="addrole_facilityid" name="add_c_facility_id" type="hidden" class="add_fid form-control" value="1">
+                                        <input id="addrole_createdby" name="add_createdby" type="hidden" class="add_createdby form-control">
+                                        <input id="addrole_updatedby" name="add_updatedby" type="hidden" class="add_updatedby form-control">
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close-user-update">
+                                                    <i class="fa  fa-close"></i> Cancel </button>
+                                                <button type="button" class="btn btn-default btn-md pull-right add-role">
+                                                    <i class="fa  fa-save"></i> Add Role</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by
+            <a href="#">© 2018 mhealthkenya.com</a>
+        </p>
+    </div>
+</div>
+<!--/.row-->

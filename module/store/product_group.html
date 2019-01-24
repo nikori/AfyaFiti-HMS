@@ -1,0 +1,224 @@
+
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Product/Service Group/ Product Group Management</li>
+        </ol>
+    </div><!--/.row-->
+    <div class="row product_group_table_div">
+        <div class="col-lg-12">
+            <div class="panel-heading">Product/Service Group Details</div>
+            <div class="panel-body">
+                <div>
+                    <button class="btn btn-info btn-sm add_product_group_link"><i class="fa fa-plus-square-o "></i> Add Product Group</button>
+                </div>
+                <hr>
+                <div class="product_group_results_div">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="add_product_group_div" style="display: none;">
+
+        <div class="row add_product_group_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Add Product Group</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Product Group Details</div>
+                    <div class="panel-body">
+                        <h4>Product Group Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal add_product_group_form" id="add_product_group_form" >
+                                    <fieldset>
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="id_name" name="name" type="text" placeholder="Product Group name" class="form-control input-md name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="Code"> Code</label>
+                                            <div class="col-md-9">
+                                                <input id="id_code" name="code" type="text" placeholder="Code" class="form-control input-md code">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Node ID </label>
+                                            <div class="col-md-9">
+
+
+
+                                                <select class="select select2 c_node_id input-md form-control" name="c_node_id" id="id_c_node_id" >
+                                                    <option value="">Please select : </option>
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Description</label>
+                                            <div class="col-md-9">
+
+                                                <textarea class="form-control input-md description" id="id_description" name="description" placeholder="Description">
+                                                    
+                                                </textarea>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <input  id ="createdby" name="createdby" type="hidden"  class="createdby form-control">
+
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_update_form" id="close_update_form" ><i class="fa  fa-close"></i>  Cancel </button>
+
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn add_product_group_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Add Product Group</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+    <div class="update_product_group_div" style="display: none;">
+
+        <div class="row update_product_group_description">
+            <div class="col-lg-12">
+                <h1 class="page-header">Update Product Group</h1>
+            </div>
+        </div><!--/.row-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Product Group Details</div>
+                    <div class="panel-body">
+                        <h4>Product Group Details</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal update_product_group_form" id="update_product_group_form" >
+                                    <fieldset>
+
+                                        <!-- Name input-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="name"> Name</label>
+                                            <div class="col-md-9">
+                                                <input id="update_name" name="name" type="text" placeholder="Product Group name" class="form-control input-md update_name">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="Code"> Code</label>
+                                            <div class="col-md-9">
+                                                <input id="update_code" name="code" type="text" placeholder="Code" class="form-control input-md update_code">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="code"> Node ID </label>
+                                            <div class="col-md-9">
+
+                                                <select class="select select2 update_c_node_id input-md form-control" name="c_node_id" id="update_c_node_id" >
+                                                    <option value="">Please select : </option>
+                                                </select>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label" for="description"> Description</label>
+                                            <div class="col-md-9">
+
+                                                <textarea class="form-control input-md update_description" id="update_description" name="description" placeholder="Description">
+                                                    
+                                                </textarea>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                        <input  id ="update_createdby" name="createdby" type="hidden"  class="createdby form-control">
+                                        <input  id ="updatedby" name="updatedby" type="hidden"  class="updatedby form-control">
+                                        <input  id ="update_m_productgroup_id" name="m_productgroup_id" type="hidden" placeholder="Product Group ID  "  class="update_m_productgroup_id form-control">
+
+
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-center">
+                                                <button type="button" class="btn btn-default btn-md pull-left submit-btn close_update_form" id="close_update_form" ><i class="fa  fa-close"></i>  Cancel </button>
+                                                <button type="submit" class="btn btn-default btn-md pull-right submit-btn update_product_group_btn" id="submit-btn" ><i class="fa  fa-save"></i>  Update Product Group</button>
+                                            </div>
+                                        </div>
+
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+
+    </div>
+
+
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+
+

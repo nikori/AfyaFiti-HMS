@@ -1,0 +1,103 @@
+   
+
+<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <div class="row">
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-teal panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-users color-blue"></em>
+                        <div class="large reg_patients" id="manager_reg_patients"></div>
+                        <div class="text-muted">
+                            <a class="patients_report_link" href="javascript:void(0)" onclick="load_patients()">
+                                Registered Patients
+                            </a>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-blue panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-address-book-o color-orange"></em>
+                        <div class="large reg_visits" id="manager_reg_visits">12</div>
+                        <div class="text-muted">Today's visit</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-lg-4 no-padding">
+                <div class="panel panel-orange panel-widget border-right">
+                    <div class="row no-padding"><em class="fa fa-xl fa-money color-teal"></em>
+                        <div class="large pharm_collection">150000</div>
+                        <div class="text-muted">This month's revenue</div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+    <div class="panel panel-container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body easypiechart-panel">
+                    <ul class="list-inline font-14">
+                        <div id="visits_piechart" style="height: 300px"></div>
+                    </ul>
+                    <h3 class="font-normal">Visits per Clinic</h3>
+                </div>                
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-blue panel-widget border-right">
+                    <div class="panel-body easypiechart-panel">
+                        <ul class="list-inline font-14">
+                            <div id="revenue_piechart" style="height: 300px"></div>
+                        </ul>
+                        <h3 class="font-normal">Revenue per section</h3>
+                    </div>                                         
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+    <div class="panel panel-container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-teal panel-widget border-right">
+                    <div class="panel-body easypiechart-panel">
+                        <ul class="list-inline font-14">
+                            <div id="v_monthly_bargraph"></div>
+                        </ul>
+                        <h3 class="font-normal">Visits monthly</h3>
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-blue panel-widget border-right">
+                    <div class="panel-body easypiechart-panel">
+                        <ul class="list-inline font-14">
+                            <div id="r_monthly_bargraph" ></div>
+                        </ul>
+                        <h3 class="font-normal">Revenue collection monthly</h3>
+                    </div>                     
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div> 
+
+    <div class="col-sm-12">
+        <p class="back-link">Developed by <a href="#">© 2017 mhealthkenya.com</a></p>
+    </div>
+</div><!--/.row-->
+
+<!--<script src="js/module_js/menu.js"></script>-->
